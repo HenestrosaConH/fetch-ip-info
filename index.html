@@ -30,9 +30,9 @@
 		</script>
 		<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </head>
-  <body class="bg-white dark:bg-gray-900">
-    <main class="container mx-auto p-6">
-      <form class="bg-white dark:bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4" id="form">
+  <body class="bg-white dark:bg-black container mx-auto p-6">
+    <main>
+      <form class="bg-white dark:bg-gray-900 shadow-md rounded px-8 pt-6 pb-8 mb-4 border border-gray-200" id="form">
 				<section class="mb-4">
 					<label 
 						class="block text-gray-700 dark:text-white text-lg font-bold mb-2" 
@@ -41,7 +41,7 @@
 						IP
 					</label>
 					<input
-						class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						class="shadow appearance-none bg-white dark:bg-gray-800 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 						id="input"
 						type="text"
 						placeholder="Introduce aquí la IP"
@@ -51,7 +51,7 @@
 				</section>
 				<section class="flex justify-center">
 					<button 
-						class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+						class="bg-blue-500 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 						type="submit" 
 						id="submit"
 					>
@@ -61,7 +61,7 @@
       </form>
 
 			<div class="accordion shadow-md rounded mt-8" id="accordion">
-				<div class="accordion-item bg-white dark:bg-gray-900 border border-gray-200">
+				<div class="accordion-item bg-white dark:bg-black border border-gray-200">
 					<h2 class="accordion-header mb-0" id="heading_data">
 						<button class="
 							accordion-button
@@ -113,7 +113,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="accordion-item bg-white dark:bg-gray-900 border border-gray-200">
+				<div class="accordion-item bg-white dark:bg-black border border-gray-200">
 					<h2 class="accordion-header mb-0" id="heading_json">
 						<button class="
 							accordion-button
@@ -145,7 +145,7 @@
 					>
 						<div class="accordion-body pt-4 px-5">
 							<pre>
-								<code id="json_results" class="json rounded"></code>
+								<code id="json_results" class="json dark:bg-gray-900 dark:text-white rounded"></code>
 							</pre>
 						</div>
 					</div>
@@ -153,10 +153,10 @@
 			</div>
     </main>
 
-		<footer class="p-4 pb-8 sm:p-6 dark:bg-gray-900">
+		<footer class="p-4 pb-8 sm:p-6">
 			<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 			<div class="sm:flex sm:items-center sm:justify-between">
-				<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://github.com/HenestrosaConH/" class="hover:underline" target="_blank" rel="noopener">José Carlos López Henestrosa</a>. All Rights Reserved.</span>
+				<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://github.com/HenestrosaConH/" class="underline" target="_blank" rel="noopener">José Carlos López Henestrosa</a>. All Rights Reserved.</span>
 				<div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
 					<a 
 						href="https://www.linkedin.com/in/josecarloslh/" 
