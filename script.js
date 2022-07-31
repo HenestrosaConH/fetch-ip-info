@@ -1,28 +1,7 @@
-const OPTIONS = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "86763b7999msh4744f543fd3739dp17a99fjsncb130a88d1fe",
-    "X-RapidAPI-Host": "ip-geolocation-and-threat-detection.p.rapidapi.com",
-  },
-};
-
 const fetchIpInfo = async (ip) => {
   try {
-    const res = await fetch(
-      `https://ip-geolocation-and-threat-detection.p.rapidapi.com/${ip}`,
-      OPTIONS
-    );
+    const res = await fetch(`https://www.iplocate.io/api/lookup/${ip}`);
     return await res.json();
-  } catch (err) {
-    return console.error(err);
-  }
-};
-
-const fetchUserIp = async () => {
-  try {
-    const res = await fetch(`http://ip.jsontest.com/`);
-    const res2 = await res.json();
-    return res2.ip;
   } catch (err) {
     return console.error(err);
   }
@@ -30,17 +9,27 @@ const fetchUserIp = async () => {
 
 const $ = (selector) => document.querySelector(selector);
 
+const completeInfo = (jsonIp) => {
+	$("#ip_address").innerHTML = jsonIp.ip;
+	$("#isp").innerHTML = jsonIp.org;
+	$("#country").innerHTML = jsonIp.country;
+	$("#state").innerHTML = jsonIp.subdivision;
+	$("#city").innerHTML = jsonIp.city;
+	$("#maps_url").setAttribute("href", `https://www.google.com/maps/@${jsonIp.latitude},${jsonIp.longitude}`);
+}
+
 const $exampleIp = $("#example_ip");
 const $form = $("#form");
 const $input = $("#input");
 const $submit = $("#submit");
-const $results = $("#results");
+const $jsonResults = $("#json_results");
 
-const userIp = await fetchUserIp();
-$exampleIp.innerHTML = userIp;
+const userIpInfo = await fetchIpInfo("");
 
-if (userIp) {
-	$results.innerHTML = `<strong>${JSON.stringify(await fetchIpInfo(userIp), null, 2)}</strong> (tu IP)`;
+if (userIpInfo) {
+  $exampleIp.innerHTML = `<strong>${userIpInfo.ip}</strong> (tu IP)`;
+  completeInfo(userIpInfo);
+  $jsonResults.innerHTML = JSON.stringify(userIpInfo, null, 2);
 }
 
 $form.addEventListener("submit", async (event) => {
@@ -54,7 +43,8 @@ $form.addEventListener("submit", async (event) => {
   const ipInfo = await fetchIpInfo(value);
 
   if (ipInfo) {
-    $results.innerHTML = JSON.stringify(ipInfo, null, 2);
+    completeInfo(ipInfo);
+    $jsonResults.innerHTML = JSON.stringify(ipInfo, null, 2);
   }
 
   $submit.removeAttribute("disabled");
