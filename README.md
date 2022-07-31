@@ -54,7 +54,9 @@
 
 ## About The Project
 
-[![Main Screen shot][main-screenshot]](https://fetchipinfo.netlify.app/)
+[![Main screenshot][main-screenshot]](https://fetchipinfo.netlify.app/)
+
+[![Main screenshot dark][main-screenshot-dark]](https://fetchipinfo.netlify.app/)
 
 As the description of the repository says, this is a website in which the user can fetch data from a given IP. It also gets the user's IP and show its info by default.
 
@@ -141,3 +143,4 @@ I've made use of the following repositories to make this README:
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/henestrosaconh
 [main-screenshot]: docs/img/main-screenshot.png
+[main-screenshot-dark]: docs/img/main-screenshot-dark.png
