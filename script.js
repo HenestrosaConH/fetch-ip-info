@@ -15,7 +15,7 @@ const completeInfo = (jsonIp) => {
 	$("#country").innerHTML = jsonIp.country;
 	$("#state").innerHTML = jsonIp.subdivision;
 	$("#city").innerHTML = jsonIp.city;
-	$("#maps_url").setAttribute("href", `https://www.google.com/maps/@${jsonIp.latitude},${jsonIp.longitude}`);
+	$("#maps_url").setAttribute("href", `https://www.google.com/maps/search/?api=1&query=${jsonIp.latitude},${jsonIp.longitude}`);
 }
 
 const $exampleIp = $("#example_ip");
