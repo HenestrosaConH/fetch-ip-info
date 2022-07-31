@@ -140,4 +140,4 @@ I've made use of the following repositories to make this README:
 [issues-url]: https://github.com/HenestrosaConH/fetch-ip-info/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/henestrosaconh
-[main-screenshot]: docs/main-screenshot.png
+[main-screenshot]: docs/img/main-screenshot.png
