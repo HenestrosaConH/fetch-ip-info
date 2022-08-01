@@ -1,0 +1,7 @@
+:root {
+	--text-blue-500: rgb(59, 130, 246)
+}
+
+.accordion-button[aria-expanded="true"] {
+	color: var(--text-blue-500) !important;
+}

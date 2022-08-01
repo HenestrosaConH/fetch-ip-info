@@ -1,3 +1,5 @@
+import toggleTheme from "./theme.js";
+
 const fetchIpInfo = async (ip) => {
   try {
     const res = await fetch(`https://www.iplocate.io/api/lookup/${ip}`);
@@ -49,4 +51,16 @@ $form.addEventListener("submit", async (event) => {
 
   $submit.removeAttribute("disabled");
   $submit.removeAttribute("aria-busy");
+});
+
+const $themeToggler = $("#theme_toggler");
+
+$themeToggler.addEventListener("click", function() {
+	if (localStorage.theme === "dark") {
+		localStorage.theme = "light";
+	} else {
+		localStorage.theme = "dark";
+	}
+	
+	toggleTheme();
 });
