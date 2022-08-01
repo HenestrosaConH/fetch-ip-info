@@ -23,7 +23,7 @@
   <p align="center">
     Website in which the user can fetch data from a given IP.
     <br />
-		<a href="fetchipinfo.netlify.app">Website</a>
+		<a href="https://fetchipinfo.netlify.app">Website</a>
     ·
     <a href="https://github.com/HenestrosaConH/fetch-ip-info/issues">Report Bug</a>
     ·
