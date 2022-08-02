@@ -20,24 +20,22 @@ const completeInfo = (jsonIp) => {
 	$("#maps_url").setAttribute("href", `https://www.google.com/maps/search/?api=1&query=${jsonIp.latitude},${jsonIp.longitude}`);
 }
 
-const $exampleIp = $("#example_ip");
-const $form = $("#form");
-const $input = $("#input");
-const $submit = $("#submit");
-const $jsonResults = $("#json_results");
-
 const userIpInfo = await fetchIpInfo("");
 
+const $jsonResults = $("#json_results");
+
 if (userIpInfo) {
-  $exampleIp.innerHTML = `<strong>${userIpInfo.ip}</strong> (tu IP)`;
+  $("#example_ip").innerHTML = `<strong>${userIpInfo.ip}</strong> (tu IP)`;
   completeInfo(userIpInfo);
   $jsonResults.innerHTML = JSON.stringify(userIpInfo, null, 2);
 }
 
-$form.addEventListener("submit", async (event) => {
+$("#form").addEventListener("submit", async (event) => {
   event.preventDefault();
-  const { value } = $input;
+  const { value } = $("#input");
   if (!value) return;
+
+	const $submit = $("#submit");
 
   $submit.setAttribute("disabled", "");
   $submit.setAttribute("aria-busy", "true");
