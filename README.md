@@ -74,7 +74,7 @@ The project structure very basic, it is only composed by two files (excluding th
 - [Tailwind CSS](https://tailwindcss.com/)
 - [highlight.js](https://highlightjs.org/usage/)
 - [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-- [iplocate](https://www.iplocate.io)
+- [IPLocate](https://www.iplocate.io)
 - [Google Fonts](https://fonts.google.com/about)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
