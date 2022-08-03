@@ -60,10 +60,22 @@
 
 As the description of the repository says, this is a website in which the user can fetch data from a given IP. It also gets the user's IP and show its info by default.
 
-The project structure very basic, it is only composed by two files (excluding the favicon):
+The project structure is as follows:
  
-- `index.html`: Web page structure.
-- `script.js`: Web page logic. It handles all IP fetching and refreshes the data of the HTML.
+```
+project
+│   index.html
+│   favicon.ico    
+│
+└───js
+│   │   script.js
+│   │   theme.js
+│
+└───css
+    │   styles.css
+```
+
+As you can see, it is very easy to follow and the name of the files are pretty much self-explained. As a note, `theme.js` handles what theme (_light_ or _dark_) to show on the start, that is why it is not part of the `script.js` file.
  
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -83,7 +95,7 @@ The project structure very basic, it is only composed by two files (excluding th
 
 ## Getting Started
 
-You just have to go to the [website](https://fetchipinfo.netlify.app/) and input the IP that you want to consult. Then, you will be able to see the data fetched and the JSON retrieved by the API.
+You just have to go to the [website](https://fetchipinfo.netlify.app/) and input the IP that you want to consult. Then, you will be able to see the data fetched and the JSON retrieved from the API.
 
 If you want to contribute to the project, please fork it and create a pull request. 
 
